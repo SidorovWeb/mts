@@ -1,4 +1,3 @@
-import './import/pol'
 import './import/modules'
 import './import/components'
 import $ from 'jquery'

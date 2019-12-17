@@ -1,19 +1,18 @@
-var select = () => {
-  var selectCurrent = document.querySelectorAll('.select__header'),
-    selectItem = document.querySelectorAll('.select__item')
-  selectCurrent.forEach(item => {
-    item.addEventListener('click', e => {
-      e.currentTarget.parentElement.classList.toggle('is-open')
-    })
-  })
-  selectItem.forEach(item => {
-    item.addEventListener('click', e => {
-      e.currentTarget
-        .closest('.select')
-        .querySelector('.select__current').innerHTML = e.currentTarget.innerHTML
-      e.currentTarget.closest('.select').classList.remove('is-open')
-    })
-  })
+import $ from 'jquery'
+
+function select() {
+  $(this)
+    .parent()
+    .toggleClass('is-open')
 }
 
-select()
+function setVal() {
+  let text = $(this).text()
+  $('.select__current').text(text)
+  $(this)
+    .closest('.select')
+    .removeClass('is-open')
+}
+
+$('.select__header').on('click', select)
+$('.select__item').on('click', setVal)

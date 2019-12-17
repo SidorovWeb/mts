@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+import Swiper from '../../../../node_modules/swiper/js/swiper'
 
 const sliderPartners = new Swiper('.slider-partners', {
   slidesPerView: 1,

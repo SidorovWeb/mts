@@ -1,4 +1,4 @@
-import Swiper from 'swiper'
+import Swiper from '../../../../node_modules/swiper/js/swiper'
 // import $ from 'jquery'
 
 function slider() {
