@@ -1,0 +1,17 @@
+.s-partners {
+	padding-bottom: 30px;
+
+	@media screen and (max-width:576px) {
+		padding-bottom: 60px;
+	}
+}
+
+.partners {
+	&__list {
+		position: relative;
+
+		@media screen and (max-width:576px) {
+			padding-top: 20px;
+		}
+	}
+}

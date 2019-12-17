@@ -1,0 +1,46 @@
+.benefits-swiper {
+	padding-top: 35px;
+	overflow: inherit;
+	@include sm(overflow, hidden);
+}
+
+.benefits-swiper .swiper-wrapper {
+	@include md(width, 73.8%);
+
+	@media screen and (max-width: 480px) {
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.benefits-swiper .swiper-wrapper {
+		width: auto !important;
+		@include row-flex();
+	}
+}
+
+.benefits-swiper .swiper-slide {
+	display: flex;
+	align-items: stretch;
+	min-height: 224px;
+	margin-bottom: 66px;
+	@include col();
+	@include size(4);
+	@include size-md(6);
+	@include size-sm(12);
+
+	@media (max-width: 576px) {
+		min-height: 233px;
+		margin-bottom: 30px;
+	}
+}
+
+.benefits-swiper .swiper-pagination {
+	display: block;
+}
+
+@media (min-width: 576px) {
+	.benefits-swiper .swiper-pagination {
+		display: none;
+	}
+}

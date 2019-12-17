@@ -1,0 +1,36 @@
+.swiper-pagination__custom {
+	position: relative;
+	display: none;
+
+	@media screen and (max-width: 567px) {
+		display: block;
+	}
+
+	@include not-last {
+		margin-right: 7px;
+	}
+
+	& .swiper-pagination-bullet {
+		z-index: 1;
+		width: 9px;
+		height: 9px;
+		background-color: $light-grey;
+		cursor: pointer;
+	}
+
+	& .swiper-pagination-bullet-active {
+		background-color: $accent;
+	}
+}
+
+.swiper-pagination__custom-prod {
+	bottom: 21px !important;
+}
+
+.swiper-pagination__custom-partners {
+	margin-top: 24px;
+}
+
+.swiper-pagination__custom-benefits {
+	margin-top: 24px;
+}

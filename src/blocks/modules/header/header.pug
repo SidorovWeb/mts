@@ -1,0 +1,14 @@
+include ../../../views/helpers/mixins.pug
+
+header.s-header
+	.header.header-main
+		.header__logo
+			include  ../../components/logo/logo.pug
+		.header__nav
+			include ../../components/nav/nav.pug
+		.header__contact
+			a(href="tel:+74952910914", title="title").header__contact-tel +7 (495) 291-09-14
+				+icon('tel', 'header__contact-icon')
+			a(href="#", title="title").header__contact-link  Оформить заявку
+		.header__hamburger
+			include ../../components/hamburger/hamburger.pug

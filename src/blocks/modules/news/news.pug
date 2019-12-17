@@ -1,0 +1,28 @@
+section.s-news
+	+img-png('s-news__bg rotate-left','img/@2x/gear-2','img/@2x/gear-2','437','437','Шестеренка','data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==')
+	//- img(src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==', data-src="img/other/gear-2.svg", alt="Шестеренка", height='437', width='437').lazy.s-news__bg.rotate-left
+	.container
+		.news
+			h2.h2.news__title
+				span Новости
+		.news__list
+			.news__item
+				a(href="#", title="title").news__link.news__link--1.hover
+					+img-jpg('news__item-bg','img/@1x/news/1','img/@2x/news/1','410','570','Польская KGHM планирует покупку медного месторождения в Казахстане','data:image/gif;base64,R0lGODlhOQApAIAAAP///wAAACH5BAEAAAEALAAAAAA5ACkAAAIxjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8fgrAAA7')
+					.news__content
+						span.news__data Сегодня, в 12:00
+						span.news__content-title Польская KGHM планирует покупку медного месторождения в Казахстане
+						p.news__text Польская компания KGHM Polska Miedź S.A., которая является вторым по величине производителем меди в Европе, планирует покупку медного месторождения в Казахстане, чтобы довести собственное производство до 700 тыс. тонн к 2018 году, сообщает Reuters
+			.news__item.news__midl-item
+				a(href="#", title="title").news__link.news__midl-link.hover
+					+img-jpg('news__item-bg','img/@1x/news/2','img/@2x/news/2','190','570','Сравнительный анализ никель-алюминиевой проволоки «Алюник 7/1» с проволокой «Метко 405» и ТАFА','data:image/gif;base64,R0lGODlhAwABAIAAAP///wAAACH5BAEAAAEALAAAAAADAAEAAAICjAsAOw==')
+					.news__content
+						span.news__data 13 февраля 2019
+						span.news__midl-title Сравнительный анализ никель-алюминиевой проволоки «Алюник 7/1» с проволокой «Метко 405» и ТАFА
+				a(href="#", title="title").news__link.news__midl-link.hover
+					+img-jpg('news__item-bg','img/@1x/news/3','img/@2x/news/3','190','570','В Судане заработал аффинажный завод по переработке золота, который, по мнению чиновников, является одним из крупнейших в Африке.','data:image/gif;base64,R0lGODlhAwABAIAAAP///wAAACH5BAEAAAEALAAAAAADAAEAAAICjAsAOw==')
+					.news__content
+						span.news__data 13 февраля 2019
+						span.news__midl-title В Судане заработал аффинажный завод по переработке золота, который, по мнению чиновников, является одним из крупнейших в Африке.
+		.news__btn
+			a(href="#", title="Основная кнопка").btn.btn-main.hero-content__bnt Смотреть все новости

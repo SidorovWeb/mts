@@ -1,0 +1,19 @@
+mixin icon(name,mod)
+	if(mod)
+		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+			use(xlink:href="img/sprites/sprite.svg#" + name)
+	else
+		svg(class="svg-sprite-icon icon-" + name)
+			use(xlink:href="img/sprites/sprite.svg#" + name)
+
+//- img/@1x/name
+//- img/@2x/name
+mixin img-jpg(cls,img1x,img2x,height,width,alt,placeholder)
+	picture.parent
+		source(srcset=placeholder ,data-srcset=`${img1x}.webp 1x, ${img2x}.webp 2x`, type='image/webp')
+		img.lazy( class=cls,alt=alt, src=placeholder, data-src=`${img1x}.jpg` data-srcset=`${img1x}.jpg 1x, ${img2x}.jpg 2x`, height=height, width=width)
+
+mixin img-png(cls,img1x,img2x,height,width,alt,placeholder)
+	picture.parent
+		source(srcset=placeholder ,data-srcset=`${img1x}.webp 1x, ${img2x}.webp 2x`, type='image/webp')
+		img.lazy( class=cls,alt=alt, src=placeholder, data-src=`${img1x}.png` data-srcset=`${img1x}.png 1x, ${img2x}.png 2x`, height=height, width=width)

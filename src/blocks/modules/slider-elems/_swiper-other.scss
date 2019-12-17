@@ -1,0 +1,14 @@
+.swiper-pagination__block {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 11;
+	width: 100%;
+	transform: translateY(-25px);
+}
+
+.swiper-pagination__partners {
+	margin-top: 40px;
+	transform: translateY(-18px);
+}

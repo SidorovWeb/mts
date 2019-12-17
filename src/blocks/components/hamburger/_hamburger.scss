@@ -1,0 +1,58 @@
+.hamburger {
+	position: relative;
+	display: none;
+	z-index: 999;
+	width: 28px;
+	height: 25px;
+	margin-left: auto;
+	cursor: pointer;
+
+
+	@media screen and (max-width: 1170px) {
+		display: block;
+	}
+
+	&__span {
+		position: absolute;
+		width: inherit;
+		height: 2px;
+		margin-top: 10px;
+		background-color: $white;
+		opacity: 0;
+		transform: translateX(0) translateY(0) rotate(0);
+		transition: all 0.3s;
+
+		@media screen and (max-width: 1170px) {
+			opacity: 1;
+		}
+
+		&:nth-child(1) {
+			top: -7px;
+			background-color: $white;
+		}
+
+		&:nth-child(3) {
+			top: 7px;
+			background-color: $white;
+		}
+	}
+
+	&--open {
+		& .hamburger__span {
+			background-color: transparent;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				background-color: $white;
+			}
+
+			&:nth-child(1) {
+				transform: translateX(0) translateY(8px) rotate(45deg) !important;
+			}
+
+			&:nth-child(3) {
+				transform: translateX(0) translateY(-6px) rotate(-45deg) !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.swiper-destr {
+	padding-top: 36px;
+	overflow: inherit;
+	@include sm(overflow, hidden);
+
+}
+
+.swiper-destr .swiper-wrapper {
+	@include md(width, 73.8%);
+
+	@media screen and (max-width: 480px) {
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.swiper-destr .swiper-wrapper {
+		width: auto !important;
+		@include row-flex();
+	}
+}
+
+.swiper-destr .swiper-slide {
+	margin-bottom: 47px;
+	overflow: hidden;
+	transition: all .2s cubic-bezier(.02, .01, .47, 1);
+	border-radius: 5px;
+	box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.05);
+	@include col();
+	@include size(3);
+	@include size-lg(4);
+	@include size-md(6);
+	@include size-sm(12);
+
+	&:hover {
+		transform: translateY(-4px);
+		transition-delay: 0s !important;
+		box-shadow: 0 25px 40px rgba(0, 0, 0, .06);
+	}
+}
+
+.swiper-destr .swiper-pagination {
+	display: block;
+}
+
+@media (min-width: 576px) {
+	.swiper-destr .swiper-pagination {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+   content in swiper
+ ========================================================================== */
+
+.product {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: $white;
+
+	@media (max-width: 576px) {
+		.product {
+			width: 82%;
+		}
+	}
+
+	&__container {
+		padding: 24px 40px 36px 40px;
+		@include lg(padding, 24px 20px 36px 20px);
+	}
+
+	&__title {
+		margin-bottom: 6px;
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		font-size: 15px;
+		color: $dark-grey;
+		transition: $transition;
+
+		&:hover {
+			color: $accent;
+
+			&:before {
+				border-bottom: 1px dashed transparent;
+			}
+
+			.product__icon {
+				transform: translateX(10px);
+				fill: $accent;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: calc(100% - 20px);
+			height: 1px;
+			border-bottom: 1px dashed $dark-grey;
+			opacity: .8;
+			transition: $transition;
+		}
+	}
+
+	&__icon {
+		width: 11px;
+		height: 11px;
+		margin-left: 5px;
+		transition: $transition;
+		fill: $dark-grey;
+	}
+}

@@ -1,0 +1,130 @@
+.s-header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 990;
+	width: 100%;
+	background-color: $header-color;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 80px;
+
+	@media screen and (max-width: 1370px) {
+		padding: 18px 30px;
+
+		@include not-last {
+			margin-right: 20px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		padding: 18px 15px;
+
+		@include not-last {
+			margin-right: 10px;
+		}
+	}
+
+	@media screen and (max-width: 1170px) {
+
+		@include not-last {
+			margin-right: 20px;
+		}
+	}
+
+	@media (max-width: 576px) {
+		padding: 10px 7.5px;
+	}
+
+	&__logo {
+		z-index: 999;
+	}
+
+	&__nav {
+		@media screen and (max-width: 1170px) {
+			margin-right: 20px;
+			margin-left: auto;
+		}
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		z-index: 999;
+		text-align: right;
+
+		@media screen and (max-width: 1170px) {
+			flex-direction: row;
+			align-items: center;
+
+			@include not-last {
+				margin-right: 20px;
+			}
+		}
+
+		@media (max-width: 576px) {
+			display: none;
+		}
+	}
+
+	&__contact-tel {
+		position: relative;
+		padding-left: 25px;
+		font-weight: 400;
+		font-size: 18px;
+		font-family: $gilroy;
+		color: $white;
+		transition: $transition;
+
+		@media screen and (max-width: 1250px) {
+			font-size: 16px;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+
+	&__contact-icon {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 14px;
+		height: 14px;
+		margin-top: -2px;
+		transform: translateY(-50%);
+	}
+
+	&__contact-link {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		font-family: $gilroy;
+		color: $accent;
+		border-bottom: 1px dashed rgba($accent, 0.6);
+
+		&:hover {
+			color: $yellow;
+			border-bottom: 1px dashed rgba($yellow, 0.6);
+		}
+	}
+
+	&__hamburger {
+		display: none;
+
+		@media screen and (max-width: 1170px) {
+			display: block;
+		}
+	}
+}

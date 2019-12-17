@@ -1,0 +1,123 @@
+.main-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 100px;
+
+		@include not-last {
+			margin-right: 50px;
+		}
+
+		@media screen and (max-width: 1540px) {
+			margin-right: 50px;
+
+			@include not-last {
+				margin-right: 20px;
+			}
+		}
+
+		@media screen and (max-width: 1170px) {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			flex-direction: column;
+			align-items: flex-start;
+			z-index: 997;
+			width: 250px;
+			height: 100vh;
+			margin: 0;
+			padding-left: 60px;
+			background: $header-color;
+			transform: translateX(110%);
+			transition: transform $transition;
+
+			@include not-last {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+
+			&.open {
+				display: flex;
+				transform: translateX(0);
+				transition: transform $transition;
+			}
+		}
+	}
+
+	&__item {
+		@media screen and (max-width: 1170px) {
+			width: 100%;
+		}
+	}
+
+	&__link {
+		font-size: 15px;
+		color: $white;
+		cursor: pointer;
+		transition: $transition;
+		white-space: nowrap;
+
+		@media screen and (max-width: 1170px) {
+			display: block;
+			width: 100%;
+		}
+
+		&:hover {
+			color: $accent;
+			text-decoration: none;
+
+			.main-nav__icon {
+				transform: rotate(-90deg);
+				fill: $accent;
+
+				@media screen and (max-width: 1170px) {
+					transform: rotate(0) translateX(10px);
+				}
+			}
+		}
+	}
+
+	&__icon {
+		width: 10px;
+		height: 10px;
+		margin-left: 10px;
+		opacity: .6;
+		transform: rotate(90deg);
+		transition: $transition;
+		transition: $transition;
+		fill: $white;
+
+		@media screen and (max-width: 1170px) {
+			transform: rotate(0);
+		}
+	}
+
+	&__select {
+		z-index: 999;
+	}
+
+	&__search {
+		z-index: 999;
+		margin-right: 42px;
+
+		@media screen and (max-width: 1540px) {
+			margin-right: 22px;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+}
+
+.main-nav__select .select__icon-next {
+	transform: rotate(90deg);
+}

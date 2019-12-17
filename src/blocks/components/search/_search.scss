@@ -1,0 +1,13 @@
+.search {
+	&__icon {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		transition: $transition;
+		fill: $white;
+
+		&:hover {
+			fill: $accent;
+		}
+	}
+}

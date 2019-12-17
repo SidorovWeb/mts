@@ -1,0 +1,17 @@
+.logo {
+
+	&__img {
+		width: 176px;
+		height: 44px;
+		background-color: $header-color;
+
+		@media screen and (max-width: 1250px) {
+			width: 146px;
+			height: 34px;
+		}
+	}
+}
+
+.logo__img {
+	background-image: none !important;
+}

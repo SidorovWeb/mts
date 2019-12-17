@@ -1,0 +1,20 @@
+nav.main-nav
+	ul.main-nav__list
+		li.main-nav__item
+			a(href="#", title="О заводе").main-nav__link О заводе
+				+icon('next', 'main-nav__icon')
+		li.main-nav__item
+			a(href="#", title="Продукция").main-nav__link Продукция
+				+icon('next', 'main-nav__icon')
+		li.main-nav__item
+			a(href="#", title="Для партнёров").main-nav__link Для партнёров
+				+icon('next', 'main-nav__icon')
+		li.main-nav__item
+			a(href="#", title="Новости").main-nav__link Новости
+				+icon('next', 'main-nav__icon')
+		li.main-nav__item
+			a(href="#", title="Контакты").main-nav__link Контакты
+	.main-nav__search
+		include ../../components/search/search.pug
+	.main-nav__select
+		include ../../components/select/select.pug
