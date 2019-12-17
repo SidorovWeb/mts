@@ -70,7 +70,7 @@
 
 
 // Max breakpoint
-$max-breakpoint: 1170;
+$max-breakpoint: 1620;
 $wide-screen: "(min-width: #{$max-breakpoint}px)";
 
 @function get-vw($target) {

@@ -30,6 +30,7 @@
 .hero-container {
 	z-index: 1;
 	@extend .hero-bg;
+	width: 100%;
 }
 
 .hero-content {
@@ -120,9 +121,9 @@
 
 	&__bnt {
 		position: relative;
-		margin-bottom: 120px;
 		color: $black;
 		transition: $transition;
+		margin-bottom: 120px;
 
 		@media screen and (max-width: 1490px) {
 			margin-bottom: 60px;
