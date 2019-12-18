@@ -38,6 +38,7 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	margin: auto 0;
 
 	&__headline {
 		font-weight: 400;
@@ -62,7 +63,11 @@
 		font-family: $gilroy;
 		text-transform: uppercase;
 
-		@include fluidFontSize(38px, 110px, 480px, 1170px, 32px);
+		@include fluidFontSize(38px, 110px, 480px, 1400px, 32px);
+
+		@media screen and (max-width: 1920px) {
+			margin-bottom: 0px;
+		}
 
 		@media screen and (max-width: 1490px) {
 			margin-bottom: 10px;
@@ -96,10 +101,9 @@
 		opacity: .8;
 		font-style: normal;
 
-		@media screen and (max-width: 1490px) {
+		@media screen and (max-width: 1920px) {
 			margin-bottom: 50px;
 		}
-
 
 		@media screen and (max-width: 1280px) {
 			margin-bottom: 30px;
@@ -120,26 +124,7 @@
 	}
 
 	&__bnt {
-		position: relative;
-		color: $black;
-		transition: $transition;
-		margin-bottom: 120px;
-
-		@media screen and (max-width: 1490px) {
-			margin-bottom: 60px;
-		}
-
-		@media screen and (max-width: 1280px) {
-			margin-bottom: 40px;
-		}
-
-		@media screen and (max-width: 1024px) {
-			margin-bottom: 80px;
-		}
-
-		@media screen and (max-width: 567px) {
-			margin-bottom: 0px;
-		}
+		margin-bottom: 30px;
 	}
 
 	&__icon {
@@ -152,19 +137,28 @@
 .hero-wrap {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	// justify-content: flex-end; fix ie 11
 	height: 100%;
 	padding-bottom: 35px;
+	padding-top: 81px;
+
+	@media screen and (max-width: 1920px) {
+		padding-bottom: 0px;
+	}
 
 	@media screen and (max-width: 1490px) {
 		padding-bottom: 10px;
 	}
+
 
 	@media screen and (max-width: 667px) {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	@media screen and (max-width: 567px) {
 		padding-top: 54px;
 	}
 }
@@ -180,26 +174,26 @@
 	overflow: hidden;
 	border-radius: 15px;
 
+	@media screen and (max-width: 1280px) {
+		margin-bottom: 10px;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			max-height: 140px;
+		}
+
+		&:nth-child(2) {
+			max-height: 160px;
+		}
+	}
+
+
+	@media screen and (max-width: 992px) {
+		min-height: 140px;
+	}
+
 	@media screen and (max-width: 668px) {
 		display: none;
-	}
-
-
-
-	@media screen and (max-width: 1490px) {
-		max-height: 170px;
-
-		&:nth-child(2) {
-			max-height: 190px;
-		}
-	}
-
-	@media screen and (max-width: 1280px) {
-		max-height: 150px;
-
-		&:nth-child(2) {
-			max-height: 170px;
-		}
 	}
 
 
@@ -224,7 +218,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		align-items: center;
 		z-index: 1;
 		padding: 72px 40px 40px 40px;
 		text-align: center;
@@ -236,13 +229,10 @@
 		}
 
 		@media screen and (max-width: 1280px) {
-			padding: 15px 40px 15px 40px;
+			padding: 20px;
 		}
 
-
 		&:hover {
-
-
 			text-decoration: none;
 
 			.hero-preview__link {
@@ -261,9 +251,8 @@
 	}
 
 	&__img {
-
-		@media screen and (max-width: 1024px) {
-			height: 170px;
+		@media screen and (max-width: 992px) {
+			height: 140px;
 		}
 	}
 
@@ -275,28 +264,14 @@
 		font-family: $gilroy;
 		color: $white;
 		transition: $transition;
-
-		@media screen and (max-width: 1024px) {
-			font-size: 20px;
-		}
-
-		@media screen and (max-width: 768px) {
-			font-size: 16px;
-		}
+		@include fluidFontSize(16px, 22px, 768px, 1400px, 16px);
 
 		&--md {
 			margin-bottom: 28px;
 			font-size: 36px;
 			transform: translateY(2px);
 			letter-spacing: .3px;
-
-			@media screen and (max-width: 1024px) {
-				font-size: 22px;
-			}
-
-			@media screen and (max-width: 768px) {
-				font-size: 18px;
-			}
+			@include fluidFontSize(18px, 36px, 768px, 1400px, 18px);
 		}
 	}
 
@@ -308,6 +283,10 @@
 		transform: translateX(5px);
 		transition: $transition;
 		white-space: nowrap;
+		display: flex;
+		align-self: center;
+		align-items: center;
+		justify-content: center;
 
 		&:before {
 			content: '';
@@ -329,5 +308,15 @@
 		transition: $transition;
 		transition: $transition;
 		fill: $white;
+	}
+}
+
+.hero-preview--md .hero-preview__content {
+	@media screen and (max-width: 1280px) {
+		padding: 20px 40px;
+	}
+
+	@media screen and (max-width: 992px) {
+		padding: 20px;
 	}
 }

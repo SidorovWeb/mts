@@ -42,6 +42,6 @@ function slider() {
 }
 
 slider()
-window.addEventListener('resize', function() {
-  slider()
-})
+// window.addEventListener('resize', function() {
+//   slider()
+// })
