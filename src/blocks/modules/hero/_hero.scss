@@ -4,11 +4,11 @@
 	height: 100vh;
 	min-height: 500px;
 
-	@media screen and (max-width: 992px) {
+	@include lg-block {
 		min-height: 700px;
 	}
 
-	@media screen and (max-width: 667px) {
+	@include md-block {
 		min-height: 550px;
 	}
 }
@@ -40,6 +40,12 @@
 	text-align: center;
 	margin: auto 0;
 
+	@include md-block {
+		margin: inherit;
+		width: 100%;
+		display: block;
+	}
+
 	&__headline {
 		font-weight: 400;
 		font-size: 18px;
@@ -49,7 +55,7 @@
 		text-transform: uppercase;
 		letter-spacing: 6px;
 
-		@media screen and (max-width:576px) {
+		@include sm-block {
 			margin-bottom: 20px;
 			font-size: 16px;
 			letter-spacing: 4px;
@@ -81,7 +87,7 @@
 			margin-bottom: 30px;
 		}
 
-		@media screen and (max-width:576px) {
+		@include sm-block {
 			margin-bottom: 20px;
 		}
 
@@ -113,7 +119,9 @@
 			margin-bottom: 72px;
 		}
 
-		@media screen and (max-width: 567px) {
+		@include md-block {
+			display: block;
+			width: 100%;
 			border-bottom: 1px dashed transparent;
 		}
 
@@ -137,7 +145,6 @@
 .hero-wrap {
 	display: flex;
 	flex-direction: column;
-	// justify-content: flex-end; fix ie 11
 	height: 100%;
 	padding-bottom: 35px;
 	padding-top: 81px;
@@ -151,14 +158,14 @@
 	}
 
 
-	@media screen and (max-width: 667px) {
-		display: flex;
-		flex-direction: column;
+	@include md-block {
+		// display: flex;
+		// flex-direction: column;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 	}
 
-	@media screen and (max-width: 567px) {
+	@include sm-block {
 		padding-top: 54px;
 	}
 }
@@ -188,11 +195,11 @@
 	}
 
 
-	@media screen and (max-width: 992px) {
+	@include lg-block {
 		min-height: 140px;
 	}
 
-	@media screen and (max-width: 668px) {
+	@include md-block {
 		display: none;
 	}
 
@@ -251,7 +258,7 @@
 	}
 
 	&__img {
-		@media screen and (max-width: 992px) {
+		@include lg-block {
 			height: 140px;
 		}
 	}
@@ -316,7 +323,7 @@
 		padding: 20px 40px;
 	}
 
-	@media screen and (max-width: 992px) {
+	@include lg-block {
 		padding: 20px;
 	}
 }

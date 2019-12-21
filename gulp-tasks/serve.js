@@ -6,9 +6,9 @@ import browsersync from 'browser-sync'
 
 gulp.task('serve', () => {
   browsersync.init({
-    server: './dist/',
-    port: 4000,
-    notify: true
+    server: './dist/'
+    // port: 4000,
+    // notify: true
   })
 
   gulp.watch(paths.views.watch, gulp.parallel('views'))

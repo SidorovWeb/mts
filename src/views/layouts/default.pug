@@ -40,7 +40,11 @@ html(lang="ru")
 		link(rel="preload" as="font" href="fonts/Gilroy-ExtraBold.woff2" type="font/woff2" crossorigin)
 		link(rel="stylesheet" href="styles/main.css")
 	body
-		include ../../blocks/modules/header/header.pug
-		block content
-		include ../../blocks/modules/footer/footer.pug
+		//- .header
+		.top#top
+			include ../../blocks/modules/header/header.pug
+		.content
+			block content
+		.footer
+			include ../../blocks/modules/footer/footer.pug
 		block scripts

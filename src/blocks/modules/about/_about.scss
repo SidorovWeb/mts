@@ -23,7 +23,7 @@
 		padding-bottom: 103px;
 	}
 
-	@media screen and (max-width: 576px) {
+	@include sm-block {
 		padding-bottom: 80px;
 	}
 
@@ -44,7 +44,7 @@
 		margin-bottom: 23px;
 		background: transparent !important;
 
-		@media screen and (max-width: 576px) {
+		@include sm-block {
 			width: 60px;
 			height: 60px;
 		}
@@ -59,7 +59,9 @@
 		color: $white;
 		text-transform: uppercase;
 
-		@media screen and (max-width: 576px) {
+
+
+		@include sm-block {
 			font-size: 32px;
 
 			&:before {
@@ -91,7 +93,12 @@
 		text-align: center;
 		color: $white;
 
-		@media screen and (max-width: 576px) {
+		@include md-block {
+			display: block;
+			width: 100%;
+		}
+
+		@include sm-block {
 			font-size: 18px;
 
 			&:before {
@@ -142,7 +149,7 @@
 		height: 83.57px;
 		background: transparent !important;
 
-		@media screen and (max-width: 576px) {
+		@include sm-block {
 			display: none;
 		}
 	}

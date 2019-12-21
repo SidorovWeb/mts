@@ -1,9 +1,3 @@
-footer.s-footer
-	.container
-		.footer
-			.footer__logo
-				include ../../components/logo/logo.pug
-			span.footer__cop © 2019 г. Мценскпрокат. Все права защищены
-			a(href="#", title="Политика конфеденциальности").footer__policy Политика конфеденциальности
-			a(href="#hero", title="title").footer__to-top.slowly НАВЕРХ
-				+icon('arrow-up', 'footer__icon')
+footer.footer
+	include ../footer-top/footer-top.pug
+	include  ../footer-bottom/footer-bottom.pug
